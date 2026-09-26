@@ -10,26 +10,15 @@
   <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
   <style>
     :root {
-      --paper: #fbfcfd;
-      --ink: #1c2733;
-      --muted: #5b6875;
-      --rule: #dde3e9;
+      --paper: #ffffff;
+      --ink: #222222;
+      --muted: #555555;
+      --rule: #dddddd;
       --accent: #1f5b86;
-      --tint: #eef3f7;
+      --tint: #f3f4f5;
       --serif: "Newsreader", Georgia, "Times New Roman", serif;
       --sans: "Public Sans", "Helvetica Neue", Arial, sans-serif;
     }
-    @media (prefers-color-scheme: dark) {
-      :root {
-        --paper: #141b22;
-        --ink: #e4e9ee;
-        --muted: #9aa7b3;
-        --rule: #2a3540;
-        --accent: #7fb6de;
-        --tint: #1b252f;
-      }
-    }
-
     * { box-sizing: border-box; }
     html { scroll-behavior: smooth; }
     @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
@@ -49,7 +38,7 @@
     .page {
       max-width: 1080px;
       margin: 0 auto;
-      padding: 3rem 1.5rem 4rem;
+      padding: 2rem 1.5rem 4rem;
       display: grid;
       grid-template-columns: 260px 1fr;
       gap: 4rem;
@@ -79,8 +68,14 @@
     .sidebar address { font-style: normal; color: var(--muted); line-height: 1.5; margin-bottom: 1.25rem; }
     .contact { list-style: none; padding: 0; margin: 0 0 1.25rem; }
     .contact li { margin-bottom: 0.25rem; word-break: break-all; }
-    .nav { list-style: none; padding: 1rem 0 0; margin: 0; border-top: 1px solid var(--rule); }
-    .nav li { margin-bottom: 0.3rem; }
+    .topbar {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 1.25rem 1.5rem 0;
+      display: flex;
+      justify-content: flex-end;
+    }
+    .nav { display: flex; flex-wrap: wrap; gap: 0.5rem 1.75rem; list-style: none; margin: 0; padding: 0; font-family: var(--sans); font-size: 0.95rem; }
     .nav a { color: var(--ink); }
     .nav a:hover { color: var(--accent); }
     .cv-viewer {
@@ -166,11 +161,23 @@
       .page { grid-template-columns: 1fr; gap: 2.5rem; padding-top: 2rem; }
       .sidebar { position: static; }
       .portrait { max-width: 160px; }
-      .nav { display: flex; flex-wrap: wrap; gap: 0.25rem 1rem; }
+      .topbar { justify-content: flex-start; }
     }
   </style>
 </head>
 <body>
+  <header class="topbar">
+    <nav aria-label="Sections">
+        <ul class="nav">
+          <li><a href="#about">About</a></li>
+          <li><a href="#research">Research</a></li>
+          <li><a href="#teaching">Teaching</a></li>
+          <li><a href="#grants">Grants</a></li>
+          <li><a href="#cv">CV</a></li>
+        </ul>
+    </nav>
+  </header>
+
   <div class="page">
 
     <aside class="sidebar">
@@ -192,13 +199,6 @@
         <li><a href="https://twitter.com/zoubhagya">X / Twitter</a></li>
       </ul>
 
-      <ul class="nav">
-        <li><a href="#about">About</a></li>
-        <li><a href="#research">Research</a></li>
-        <li><a href="#teaching">Teaching</a></li>
-        <li><a href="#grants">Grants</a></li>
-        <li><a href="#cv">CV</a></li>
-      </ul>
     </aside>
 
     <main>
