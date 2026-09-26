@@ -45,7 +45,7 @@
     }
 
     /* Sidebar */
-    .sidebar { position: sticky; top: 2.5rem; align-self: start; font-family: var(--sans); font-size: 0.9rem; }
+    .sidebar { position: sticky; top: 5rem; align-self: start; font-family: var(--sans); font-size: 0.9rem; }
     .portrait {
       width: 100%;
       max-width: 220px;
@@ -69,9 +69,16 @@
     .contact { list-style: none; padding: 0; margin: 0 0 1.25rem; }
     .contact li { margin-bottom: 0.25rem; word-break: break-all; }
     .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: var(--paper);
+      border-bottom: 1px solid var(--rule);
+    }
+    .topbar nav {
       max-width: 1080px;
       margin: 0 auto;
-      padding: 1.25rem 1.5rem 0;
+      padding: 0.9rem 1.5rem;
       display: flex;
       justify-content: flex-end;
     }
@@ -109,7 +116,7 @@
 
     /* Main content */
     main { max-width: 42rem; }
-    section { margin-bottom: 3.25rem; scroll-margin-top: 2rem; }
+    section { margin-bottom: 3.25rem; scroll-margin-top: 4.5rem; }
     h2 {
       font-weight: 500;
       font-size: 1.65rem;
@@ -161,7 +168,7 @@
       .page { grid-template-columns: 1fr; gap: 2.5rem; padding-top: 2rem; }
       .sidebar { position: static; }
       .portrait { max-width: 160px; }
-      .topbar { justify-content: flex-start; }
+      .topbar nav { justify-content: flex-start; }
     }
   </style>
 </head>
