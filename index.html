@@ -389,7 +389,7 @@
       viewer.addEventListener('contextmenu', function (e) { e.preventDefault(); });
       viewer.addEventListener('dragstart', function (e) { e.preventDefault(); });
 
-      pdfjsLib.getDocument('CV.pdf').promise.then(function (pdf) {
+      pdfjsLib.getDocument('CV_Soubhagya.pdf').promise.then(function (pdf) {
         viewer.innerHTML = '';
         var scale = 2; // renders sharply on high-resolution screens
         var chain = Promise.resolve();
